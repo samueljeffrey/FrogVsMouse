@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to right, #0ed900, #278de6);
+  text-align: center;
+}
+
+main {
+  border-radius: 25px;
+  max-width: 320px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+
+h4 {
+  padding: 0 20px;
+  height: 80px;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+h2 {
+  height: 60px;
+  padding: 0 20px;
+  margin: 20px 0 0;
+}
+
+.header {
+  width: 240px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-content: space-around;
+}
+
+/* GAME */
+
+.grid {
+  width: 270px;
+  height: 270px;
+  grid-template-rows: 9px 78px 9px 78px 9px 78px 9px;
+  margin: 20px auto;
+}
+
+.grid-thin-row {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  height: 9px;
+  width: 270px;
+  grid-template-columns: 9px 78px 9px 78px 9px 78px 9px;
+}
+
+.grid-fat-row {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  width: 270px;
+  height: 78px;
+  grid-template-columns: 9px 78px 9px 78px 9px 78px 9px;
+}
+
+.dot {
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  background-color: black;
+  height: 9px;
+  width: 9px;
+}
+
+.game-line-horizontal {
+  margin: 0;
+  padding: 0;
+  background-color: #bfbfbf;
+  height: 9px;
+  width: 78px;
+  border: none;
+  outline: none;
+}
+
+.game-line-vertical {
+  margin: 0;
+  padding: 0;
+  background-color: #bfbfbf;
+  height: 78px;
+  width: 9px;
+  border: none;
+  outline: none;
+}
+
+.game-line-horizontal:hover {
+  cursor: pointer;
+}
+
+.game-line-vertical:hover {
+  cursor: pointer;
+}
+
+.square {
+  border: none;
+  width: 78px;
+  height: 78px;
+  padding: 0;
+  margin: 0;
+}
+
+.game-image {
+  padding: 9px;
+  margin: 0;
+  z-index: 1;
+}
+
+/* BUTTONS */
+
+.button {
+  -webkit-border-radius: 20;
+  -moz-border-radius: 20;
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 10px;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.start-button {
+  background: #0ed900;
+}
+
+.reset-button {
+  background: #278de6;
+}
+
+.chosen {
+  background-color: #fce12b;
+}
+
+.button-disabled {
+  background: #bfbfbf;
+}

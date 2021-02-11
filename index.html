@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frog Vs Mouse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <main>
+      <div class="header">
+        <img src="Frog.png" height="100px">
+        <h1>vs</h1>
+        <img src="Mouse.png" height="100px">
+      </div>
+      <h4>The frog player and mouse player take turns choosing lines.
+      Complete a square to conquer it, and have the most squares to win.</h4>
+      <h2></h2>
+
+
+      <div class="grid">
+        <div class="grid-thin-row">
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-a"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-b"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-c"></button>
+          <div class="dot"></div>
+        </div>
+
+        <div class="grid-fat-row">
+          <button class="game-line-vertical" id="game-line-m"></button>
+          <div class="square"><img class="game-image sq1-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-n"></button>
+          <div class="square"><img class="game-image sq2-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-o"></button>
+          <div class="square"><img class="game-image sq3-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-p"></button>
+        </div>
+
+        <div class="grid-thin-row">
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-d"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-e"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-f"></button>
+          <div class="dot"></div>
+        </div>
+
+        <div class="grid-fat-row">
+          <button class="game-line-vertical" id="game-line-q"></button>
+          <div class="square"><img class="game-image sq4-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-r"></button>
+          <div class="square"><img class="game-image sq5-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-s"></button>
+          <div class="square"><img class="game-image sq6-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-t"></button>
+        </div>
+
+        <div class="grid-thin-row">
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-g"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-h"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-i"></button>
+          <div class="dot"></div>
+        </div>
+
+        <div class="grid-fat-row">
+          <button class="game-line-vertical" id="game-line-u"></button>
+          <div class="square"><img class="game-image sq7-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-v"></button>
+          <div class="square"><img class="game-image sq8-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-w"></button>
+          <div class="square"><img class="game-image sq9-img" src="" height="60px"></div>
+          <button class="game-line-vertical" id="game-line-x"></button>
+        </div>
+
+        <div class="grid-thin-row">
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-j"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-k"></button>
+          <div class="dot"></div>
+          <button class="game-line-horizontal" id="game-line-l"></button>
+          <div class="dot"></div>
+        </div>
+
+      </div>
+
+
+      <button class="button start-button">Start</button>
+      <button class="button reset-button">Reset</button>
+    </main>
+
+    <script src="script.js"></script>
+    <audio loop="false" volume="100">
+      <source src="Frog.mp3" type="audio/wav">
+      <source src="Mouse.mp3" type="audio/wav">
+      <source src="Triumph.mp3" type="audio/wav">
+    </audio>
+  </body>
+</html>
