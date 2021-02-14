@@ -23,6 +23,8 @@ const img7 = document.querySelector(".sq7-img");
 const img8 = document.querySelector(".sq8-img");
 const img9 = document.querySelector(".sq9-img");
 
+const allImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+
 let img1Taken;
 let img2Taken;
 let img3Taken;
@@ -58,6 +60,9 @@ const lineV = document.querySelector("#game-line-v");
 const lineW = document.querySelector("#game-line-w");
 const lineX = document.querySelector("#game-line-x");
 
+const allLines = [lineA, lineB, lineC, lineD, lineE, lineF, lineG, lineH, lineI, lineJ, lineK, lineL,
+                  lineM, lineN, lineO, lineP, lineQ, lineR, lineS, lineT, lineU, lineV, lineW, lineX];
+
 const frogNoise = new Audio("Frog.mp3");
 const mouseNoise = new Audio("Mouse.mp3");
 const triumphNoise = new Audio("Triumph.mp3");
@@ -74,24 +79,12 @@ const original = function() {
   startButton.disabled = false;
   turnSign.classList.add("hidden");
   instructions.classList.remove("hidden");
-  img1.classList.add("hidden");
-  img2.classList.add("hidden");
-  img3.classList.add("hidden");
-  img4.classList.add("hidden");
-  img5.classList.add("hidden");
-  img6.classList.add("hidden");
-  img7.classList.add("hidden");
-  img8.classList.add("hidden");
-  img9.classList.add("hidden");
-  img1.src = "";
-  img2.src = "";
-  img3.src = "";
-  img4.src = "";
-  img5.src = "";
-  img6.src = "";
-  img7.src = "";
-  img8.src = "";
-  img9.src = "";
+  for (let i = 0; i < allImages.length; i++) {
+    allImages[i].classList.add("hidden");
+  }
+  for (let i = 0; i < allImages.length; i++) {
+    allImages[i].src = "";
+  }
   img1Taken = false;
   img2Taken = false;
   img3Taken = false;
@@ -101,54 +94,12 @@ const original = function() {
   img7Taken = false;
   img8Taken = false;
   img9Taken = false;
-  lineA.disabled = true;
-  lineB.disabled = true;
-  lineC.disabled = true;
-  lineD.disabled = true;
-  lineE.disabled = true;
-  lineF.disabled = true;
-  lineG.disabled = true;
-  lineH.disabled = true;
-  lineI.disabled = true;
-  lineJ.disabled = true;
-  lineK.disabled = true;
-  lineL.disabled = true;
-  lineM.disabled = true;
-  lineN.disabled = true;
-  lineO.disabled = true;
-  lineP.disabled = true;
-  lineQ.disabled = true;
-  lineR.disabled = true;
-  lineS.disabled = true;
-  lineT.disabled = true;
-  lineU.disabled = true;
-  lineV.disabled = true;
-  lineW.disabled = true;
-  lineX.disabled = true;
-  lineA.classList.remove("chosen");
-  lineB.classList.remove("chosen");
-  lineC.classList.remove("chosen");
-  lineD.classList.remove("chosen");
-  lineE.classList.remove("chosen");
-  lineF.classList.remove("chosen");
-  lineG.classList.remove("chosen");
-  lineH.classList.remove("chosen");
-  lineI.classList.remove("chosen");
-  lineJ.classList.remove("chosen");
-  lineK.classList.remove("chosen");
-  lineL.classList.remove("chosen");
-  lineM.classList.remove("chosen");
-  lineN.classList.remove("chosen");
-  lineO.classList.remove("chosen");
-  lineP.classList.remove("chosen");
-  lineQ.classList.remove("chosen");
-  lineR.classList.remove("chosen");
-  lineS.classList.remove("chosen");
-  lineT.classList.remove("chosen");
-  lineU.classList.remove("chosen");
-  lineV.classList.remove("chosen");
-  lineW.classList.remove("chosen");
-  lineX.classList.remove("chosen");
+  for (let i = 0; i < allLines.length; i++) {
+    allLines[i].disabled = true;
+  }
+  for (let i = 0; i < allLines.length; i++) {
+    allLines[i].classList.remove("chosen");
+  }
   playCount = 0;
   frogPoints = 0;
   mousePoints = 0;
@@ -261,39 +212,12 @@ startButton.addEventListener("click", function() {
   turnSign.textContent = `${currentPlayer}'s turn`;
   turnSign.classList.remove("hidden");
   instructions.classList.add("hidden");
-  img1.classList.remove("hidden");
-  img2.classList.remove("hidden");
-  img3.classList.remove("hidden");
-  img4.classList.remove("hidden");
-  img5.classList.remove("hidden");
-  img6.classList.remove("hidden");
-  img7.classList.remove("hidden");
-  img8.classList.remove("hidden");
-  img9.classList.remove("hidden");
-  lineA.disabled = false;
-  lineB.disabled = false;
-  lineC.disabled = false;
-  lineD.disabled = false;
-  lineE.disabled = false;
-  lineF.disabled = false;
-  lineG.disabled = false;
-  lineH.disabled = false;
-  lineI.disabled = false;
-  lineJ.disabled = false;
-  lineK.disabled = false;
-  lineL.disabled = false;
-  lineM.disabled = false;
-  lineN.disabled = false;
-  lineO.disabled = false;
-  lineP.disabled = false;
-  lineQ.disabled = false;
-  lineR.disabled = false;
-  lineS.disabled = false;
-  lineT.disabled = false;
-  lineU.disabled = false;
-  lineV.disabled = false;
-  lineW.disabled = false;
-  lineX.disabled = false;
+  for (let i = 0; i < allImages.length; i++) {
+    allImages[i].classList.remove("hidden");
+  }
+  for (let i = 0; i < allLines.length; i++) {
+    allLines[i].disabled = false;
+  }
 
 })
 
@@ -305,146 +229,10 @@ resetButton.addEventListener("click", function() {
 
 // GAMEPLAY
 
-lineA.addEventListener("click", function() {
-  lineA.classList.add("chosen");
-  lineA.disabled = true;
-  checkForConquer();
-})
-
-lineB.addEventListener("click", function() {
-  lineB.classList.add("chosen");
-  lineB.disabled = true;
-  checkForConquer();
-})
-
-lineC.addEventListener("click", function() {
-  lineC.classList.add("chosen");
-  lineC.disabled = true;
-  checkForConquer();
-})
-
-lineD.addEventListener("click", function() {
-  lineD.classList.add("chosen");
-  lineD.disabled = true;
-  checkForConquer();
-})
-
-lineE.addEventListener("click", function() {
-  lineE.classList.add("chosen");
-  lineE.disabled = true;
-  checkForConquer();
-})
-
-lineF.addEventListener("click", function() {
-  lineF.classList.add("chosen");
-  lineF.disabled = true;
-  checkForConquer();
-})
-
-lineG.addEventListener("click", function() {
-  lineG.classList.add("chosen");
-  lineG.disabled = true;
-  checkForConquer();
-})
-
-lineH.addEventListener("click", function() {
-  lineH.classList.add("chosen");
-  lineH.disabled = true;
-  checkForConquer();
-})
-
-lineI.addEventListener("click", function() {
-  lineI.classList.add("chosen");
-  lineI.disabled = true;
-  checkForConquer();
-})
-
-lineJ.addEventListener("click", function() {
-  lineJ.classList.add("chosen");
-  lineJ.disabled = true;
-  checkForConquer();
-})
-
-lineK.addEventListener("click", function() {
-  lineK.classList.add("chosen");
-  lineK.disabled = true;
-  checkForConquer();
-})
-
-lineL.addEventListener("click", function() {
-  lineL.classList.add("chosen");
-  lineL.disabled = true;
-  checkForConquer();
-})
-
-lineM.addEventListener("click", function() {
-  lineM.classList.add("chosen");
-  lineM.disabled = true;
-  checkForConquer();
-})
-
-lineN.addEventListener("click", function() {
-  lineN.classList.add("chosen");
-  lineN.disabled = true;
-  checkForConquer();
-})
-
-lineO.addEventListener("click", function() {
-  lineO.classList.add("chosen");
-  lineO.disabled = true;
-  checkForConquer();
-})
-
-lineP.addEventListener("click", function() {
-  lineP.classList.add("chosen");
-  lineP.disabled = true;
-  checkForConquer();
-})
-
-lineQ.addEventListener("click", function() {
-  lineQ.classList.add("chosen");
-  lineQ.disabled = true;
-  checkForConquer();
-})
-
-lineR.addEventListener("click", function() {
-  lineR.classList.add("chosen");
-  lineR.disabled = true;
-  checkForConquer();
-})
-
-lineS.addEventListener("click", function() {
-  lineS.classList.add("chosen");
-  lineS.disabled = true;
-  checkForConquer();
-})
-
-lineT.addEventListener("click", function() {
-  lineT.classList.add("chosen");
-  lineT.disabled = true;
-  checkForConquer();
-})
-
-lineU.addEventListener("click", function() {
-  lineU.classList.add("chosen");
-  lineU.disabled = true;
-  checkForConquer();
-})
-
-lineV.addEventListener("click", function() {
-  lineV.classList.add("chosen");
-  lineV.disabled = true;
-  checkForConquer();
-})
-
-lineW.addEventListener("click", function() {
-  lineW.classList.add("chosen");
-  lineW.disabled = true;
-  checkForConquer();
-})
-
-lineX.addEventListener("click", function() {
-  lineX.classList.add("chosen");
-  lineX.disabled = true;
-  checkForConquer();
-})
+for (let i = 0; i < allLines.length; i++) {
+  allLines[i].addEventListener("click", function() {
+    allLines[i].classList.add("chosen");
+    allLines[i].disabled = true;
+    checkForConquer();
+  })
+}
